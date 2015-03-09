@@ -46,10 +46,12 @@ Setting up BBB for this Project
 
 ####[Instructions to flash](http://elinux.org/Beagleboard:Booting_Ubuntu_on_BeagleBoard_Black)
 **click link ^^**
+
 	The steps described here are steps you must take before installing any version of Ubuntu described in this Wiki.
 
 	You must first decide which version you want to run.
-	This page has the image files for 3 options for installing Ubuntu/Debian on a micro SD card to boot from
+	This page has the image files for 3 options for installing Ubuntu/Debian
+	 on a micro SD card to boot from
 	Your 3 options are
 	Ubuntu Precise 12.04.2 LTS
 	Ubuntu Raring 13.04
@@ -58,29 +60,62 @@ Setting up BBB for this Project
 	Your 2 options are (click the name for download location)
 	[Ubuntu]
 	[Debian]
-	After you have downloaded the .img.xz file you want, use a program such as 7zip to extract the image file 
+	After you have downloaded the .img.xz file you want, use a 
+	program such as 7zip to extract the image file 
 	Insert the micro SD card into your computer 
 	Using a micro SD to SD or micro SD to USB adapter is fine 
 	Use Win32 Disk Imager to write the image onto your micro SD 
 	Run Win32 Disk Imager 
-	Make sure the drive letter corresponding to your micro SD card is selected
+	Make sure the drive letter corresponding to your micro SD card
+	 is selected
 	Select the unpacked image file 
-	Press 'Write' and wait for Win32 Disk Imager to finish - this should take a few minutes 
-	After Win32 Disk Imager has finished remove the micro SD card from your computer 
-	You are now ready to follow directions below that correspond to the version of Ubuntu/Debian you downloaded.
+
+	Press 'Write' and wait for Win32 Disk Imager to finish - this 
+	should take a few minutes 
+	After Win32 Disk Imager has finished remove the micro SD card 
+	from your computer 
+	You are now ready to follow directions below that correspond to 
+	the version of Ubuntu/Debian you downloaded.
 
 
 	Put the micro SD card into the powered-off BeagleBoard Black 
-	Make sure your BeagleBoard Black is connected to a powered-on display via HDMI
-	While holding down the 'boot' button (button closest to the micro SD card slot), apply power to the BeagleBoard Black
+	Make sure your BeagleBoard Black is connected to a powered-on 
+	display via HDMI
+	While holding down the 'boot' button (button closest to the micro 
+		SD card slot), apply power to the BeagleBoard Black
 	You must use an external 5V power supply, USB power will not work 
-	Continue to hold down the 'boot' button until the 4 LED lights begin to flicker 
-	If more than 15 seconds have passed without the lights beginning to flicker, remove the power and try again 
-	The Linux penguin should flash in the upper left-hand corner of your display 
-	After approximately 2-3 minutes you should be prompted for a username and password
+	Continue to hold down the 'boot' button until the 4 LED lights
+	 begin to flicker 
+	If more than 15 seconds have passed without the lights beginning 
+	to flicker, remove the power and try again 
+	The Linux penguin should flash in the upper left-hand corner
+	 of your display 
+	After approximately 2-3 minutes you should be prompted for 
+	a username and password
 	Username is: ubuntu
 	Password is: ubuntu
 	Note: echo is turned off for typing in password
 	You should now be in the command terminal for Ubuntu
-	Anytime you want to boot from micro SD to Ubuntu from now on start at step 6 
-	If you wish to load LXDE you can refer to Loading LXDE section.
+	Anytime you want to boot from micro SD to Ubuntu from
+	 now on start at step 6 
+	If you wish to load LXDE you can refer to Loading 
+	LXDE section.
+
+####[Instructions for Audio Drivers](http://andicelabs.com/2014/03/usb-audio-beaglebone/)
+**click link ^^**
+
+1. Once on BBB command line interface do:
+	1. sudo apt-get install alsa-base alsa-utils
+	2. I added the following line to uEnv.txt:
+       optargs=capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN
+    3. Be sure not to disable "BB-BONE-EMMC-2G" if you're using the on-board eMMC.
+    4. type: aplay -l
+    	**** List of PLAYBACK Hardware Devices ****
+		card 1: Device [C-Media USB Audio Device], device 0: USB Audio [USB Audio]
+  		Subdevices: 1/1
+  		Subdevice #0: subdevice #0
+  	5. sudo vi /etc/modprobe.d/alsa-base.conf
+  	6. # Keep snd-usb-audio from beeing loaded as first soundcard
+      options snd-usb-audio index=-2
+      Change the index from -2 to 0 and now the USB 
+      adapter should be allowed to become card 0.
