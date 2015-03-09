@@ -44,6 +44,7 @@ Setting up BBB for this Project
 6. [USB Mouse](http://www.amazon.com/dp/B002ZIN9DU/ref=cm_sw_r_tw_dp_v9t.ub0GPNG43)
 7. [USB Port Extender](http://www.amazon.com/AmazonBasics-4-Port-USB-2-0-Ultra-Mini/dp/B003M0NURK/ref=pd_sim_pc_1?ie=UTF8&refRID=0D15C9R5PZ4RYNTD1BYC)
 
+------------------------------------
 ####[Instructions to flash](http://elinux.org/Beagleboard:Booting_Ubuntu_on_BeagleBoard_Black)
 **click link ^^**
 
@@ -101,21 +102,22 @@ Setting up BBB for this Project
 	If you wish to load LXDE you can refer to Loading 
 	LXDE section.
 
+------------------------------------------------
 ####[Instructions for Audio Drivers](http://andicelabs.com/2014/03/usb-audio-beaglebone/)
 **click link ^^**
 
-1. Once on BBB command line interface do:
-	1. sudo apt-get install alsa-base alsa-utils
-	2. I added the following line to uEnv.txt:
-       optargs=capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN
-    3. Be sure not to disable "BB-BONE-EMMC-2G" if you're using the on-board eMMC.
-    4. type: aplay -l
-    	**** List of PLAYBACK Hardware Devices ****
-		card 1: Device [C-Media USB Audio Device], device 0: USB Audio [USB Audio]
-  		Subdevices: 1/1
-  		Subdevice #0: subdevice #0
-  	5. sudo vi /etc/modprobe.d/alsa-base.conf
-  	6. # Keep snd-usb-audio from beeing loaded as first soundcard
-      options snd-usb-audio index=-2
-      Change the index from -2 to 0 and now the USB 
-      adapter should be allowed to become card 0.
+	1. Once on BBB command line interface do:
+		1. sudo apt-get install alsa-base alsa-utils
+		2. I added the following line to uEnv.txt:
+	       optargs=capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN
+	    3. Be sure not to disable "BB-BONE-EMMC-2G" if you're using the on-board eMMC.
+	    4. type: aplay -l
+	    	**** List of PLAYBACK Hardware Devices ****
+			card 1: Device [C-Media USB Audio Device], device 0: USB Audio [USB Audio]
+	  		Subdevices: 1/1
+	  		Subdevice #0: subdevice #0
+	  	5. sudo vi /etc/modprobe.d/alsa-base.conf
+	  	6. # Keep snd-usb-audio from beeing loaded as first soundcard
+	      options snd-usb-audio index=-2
+	      Change the index from -2 to 0 and now the USB 
+	      adapter should be allowed to become card 0.
