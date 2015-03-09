@@ -35,10 +35,10 @@ Setting up BBB for this Project
 
 ####Things Needed to flash BBB:
 
-1. [5V, 2A BBB Power Supply](www.amazon.com/Power-Adapter-10W-BeagleBone-Black/dp/B00FA7DLE0/ref=sr_1_1?s=electronics&ie=UTF8&qid=1425883117&sr=1-1&keywords=beaglebone+black+power+supply)
-2. [Micro SD Card](www.amazon.com/Sandisk-MicroSDHC-Memory-Card-Adapter/dp/B000WH6H1M)
-3. [Micro HDMI-HDMI CABLE](www.amazon.com/HDMI-Male-Cable-1-3V-33AWG/dp/B0040ZTH2I/ref=sr_1_3?s=wireless&rps=1&ie=UTF8&qid=1425882768&sr=1-3&keywords=micro+hdmi+to+hdmi)
+1. [5V, 2A BBB Power Supply](http://www.amazon.com/Power-Adapter-10W-BeagleBone-Black/dp/B00FA7DLE0/ref=sr_1_1?s=electronics&ie=UTF8&qid=1425883117&sr=1-1&keywords=beaglebone+black+power+supply)
+2. [Micro SD Card](http://www.amazon.com/Sandisk-MicroSDHC-Memory-Card-Adapter/dp/B000WH6H1M)
+3. [Micro HDMI-HDMI CABLE](http://www.amazon.com/HDMI-Male-Cable-1-3V-33AWG/dp/B0040ZTH2I/ref=sr_1_3?s=wireless&rps=1&ie=UTF8&qid=1425882768&sr=1-3&keywords=micro+hdmi+to+hdmi)
 4. [External Monitor](github.com/chobberoni/beagle134/blob/master/images/February%2026%2C%202015%20at%201049PM(1).jpg)
-5. [USB Keyboard](www.amazon.com/V7-Standard-USB-Keyboard-KC0A1-4N6P/dp/B005Y0G9ME)
-6. [USB Mouse](www.amazon.com/dp/B002ZIN9DU/ref=cm_sw_r_tw_dp_v9t.ub0GPNG43)
-7. [USB Port Extender](www.amazon.com/AmazonBasics-4-Port-USB-2-0-Ultra-Mini/dp/B003M0NURK/ref=pd_sim_pc_1?ie=UTF8&refRID=0D15C9R5PZ4RYNTD1BYC)
+5. [USB Keyboard](http://www.amazon.com/V7-Standard-USB-Keyboard-KC0A1-4N6P/dp/B005Y0G9ME)
+6. [USB Mouse](http://www.amazon.com/dp/B002ZIN9DU/ref=cm_sw_r_tw_dp_v9t.ub0GPNG43)
+7. [USB Port Extender](http://www.amazon.com/AmazonBasics-4-Port-USB-2-0-Ultra-Mini/dp/B003M0NURK/ref=pd_sim_pc_1?ie=UTF8&refRID=0D15C9R5PZ4RYNTD1BYC)
