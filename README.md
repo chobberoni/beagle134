@@ -43,3 +43,44 @@ Setting up BBB for this Project
 5. [USB Keyboard](http://www.amazon.com/V7-Standard-USB-Keyboard-KC0A1-4N6P/dp/B005Y0G9ME)
 6. [USB Mouse](http://www.amazon.com/dp/B002ZIN9DU/ref=cm_sw_r_tw_dp_v9t.ub0GPNG43)
 7. [USB Port Extender](http://www.amazon.com/AmazonBasics-4-Port-USB-2-0-Ultra-Mini/dp/B003M0NURK/ref=pd_sim_pc_1?ie=UTF8&refRID=0D15C9R5PZ4RYNTD1BYC)
+
+####[Instructions to flash](http://elinux.org/Beagleboard:Booting_Ubuntu_on_BeagleBoard_Black)
+**click link ^^**
+	The steps described here are steps you must take before installing any version of Ubuntu described in this Wiki.
+
+	You must first decide which version you want to run.
+	This page has the image files for 3 options for installing Ubuntu/Debian on a micro SD card to boot from
+	Your 3 options are
+	Ubuntu Precise 12.04.2 LTS
+	Ubuntu Raring 13.04
+	Debian Wheezy 7.0.0
+	You have two current options to flash the eMMC
+	Your 2 options are (click the name for download location)
+	[Ubuntu]
+	[Debian]
+	After you have downloaded the .img.xz file you want, use a program such as 7zip to extract the image file 
+	Insert the micro SD card into your computer 
+	Using a micro SD to SD or micro SD to USB adapter is fine 
+	Use Win32 Disk Imager to write the image onto your micro SD 
+	Run Win32 Disk Imager 
+	Make sure the drive letter corresponding to your micro SD card is selected
+	Select the unpacked image file 
+	Press 'Write' and wait for Win32 Disk Imager to finish - this should take a few minutes 
+	After Win32 Disk Imager has finished remove the micro SD card from your computer 
+	You are now ready to follow directions below that correspond to the version of Ubuntu/Debian you downloaded.
+
+
+	Put the micro SD card into the powered-off BeagleBoard Black 
+	Make sure your BeagleBoard Black is connected to a powered-on display via HDMI
+	While holding down the 'boot' button (button closest to the micro SD card slot), apply power to the BeagleBoard Black
+	You must use an external 5V power supply, USB power will not work 
+	Continue to hold down the 'boot' button until the 4 LED lights begin to flicker 
+	If more than 15 seconds have passed without the lights beginning to flicker, remove the power and try again 
+	The Linux penguin should flash in the upper left-hand corner of your display 
+	After approximately 2-3 minutes you should be prompted for a username and password
+	Username is: ubuntu
+	Password is: ubuntu
+	Note: echo is turned off for typing in password
+	You should now be in the command terminal for Ubuntu
+	Anytime you want to boot from micro SD to Ubuntu from now on start at step 6 
+	If you wish to load LXDE you can refer to Loading LXDE section.
