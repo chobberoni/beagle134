@@ -27,6 +27,7 @@ Introduction
 *In hopes to create a close feeback loop with an external RF*
 *Attenae system that will attached to the output/input of the*
 *Beagle Bone Black's usb audio jacks.*
+*All in all, it will become an all-in-one speed radar unit.*
 
 Setting up BBB for this Project
 --------------------------------
@@ -48,7 +49,8 @@ Setting up BBB for this Project
 ####[Instructions to flash](http://elinux.org/Beagleboard:Booting_Ubuntu_on_BeagleBoard_Black)
 **click link ^^**
 
-	The steps described here are steps you must take before installing any version of Ubuntu described in this Wiki.
+	The steps described here are steps you must take before installing any 
+	version of Ubuntu described in this Wiki.
 
 	You must first decide which version you want to run.
 	This page has the image files for 3 options for installing Ubuntu/Debian
@@ -121,3 +123,9 @@ Setting up BBB for this Project
 	      options snd-usb-audio index=-2
 	      Change the index from -2 to 0 and now the USB 
 	      adapter should be allowed to become card 0.
+
+#####Notes Thus Far:
+------------------------------------
+	It should be said that if you've gotten up to this point you
+	have invested a fair amount of time in making you all in one 
+	radar/DSP system.
