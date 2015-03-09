@@ -1,2 +1,4 @@
-# beagle134
-Various pieces of code for my BeagleBone Black via my senior design course.
+BEAGLEBONE BLACK (COREY HOBBS, UC DAVIS, EEC134B SENIOR DESIGN)
+----------------------------------------------------------------
+
+		
