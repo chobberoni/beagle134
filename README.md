@@ -31,9 +31,10 @@ Introduction
 Setting up BBB for this Project
 --------------------------------
 
-	Since I started with BBB rev 6a, and I wanted it to run Ubuntu based linux environment, I had to flash it.
+Since I started with BBB rev 6a, and I wanted it to run Ubuntu based linux environment, I had to flash it.
 
-	Things Needed to flash BBB:
+###Things Needed to flash BBB:
+
 [5V, 2A BBB Power Supply](www.amazon.com/Power-Adapter-10W-BeagleBone-Black/dp/B00FA7DLE0/ref=sr_1_1?s=electronics&ie=UTF8&qid=1425883117&sr=1-1&keywords=beaglebone+black+power+supply)
 [Micro SD Card](www.amazon.com/Sandisk-MicroSDHC-Memory-Card-Adapter/dp/B000WH6H1M)
 [Micro HDMI-HDMI CABLE](www.amazon.com/HDMI-Male-Cable-1-3V-33AWG/dp/B0040ZTH2I/ref=sr_1_3?s=wireless&rps=1&ie=UTF8&qid=1425882768&sr=1-3&keywords=micro+hdmi+to+hdmi)
