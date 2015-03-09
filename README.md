@@ -22,11 +22,11 @@ Introduction
          anything you could do with a (low-powered) Linux computer. 
          You can’t do that with Arduino." - ALEX CASTLE of TESTED.COM
 
-    *In this course, I am attempting to implement the BBB as a function
-    generator and digital signal processor hybrid unit. 
-    In hopes to create a close feeback loop with an external RF 
-    Attenae system that will attached to the output/input of the
-    Beagle Bone Black's usb audio jacks.*
+    *In this course, I am attempting to implement the BBB as a function*
+    *generator and digital signal processor hybrid unit. *
+    *In hopes to create a close feeback loop with an external RF *
+    *Attenae system that will attached to the output/input of the*
+    *Beagle Bone Black's usb audio jacks.*
 
 Setting up BBB for this Project
 --------------------------------
