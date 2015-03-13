@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from math import log
 
 #read the raw data .wave file here
-wavefile = wave.open(r"D:\Michealia Wei\MIT_OCW_notes\ranging_files\ranging_files\running_outside_20ms.wav", "rb")
+wavefile = wave.open(r"running_outside_20ms.wav", "rb")
 nchannels = wavefile.getnchannels()
 sample_width = wavefile.getsampwidth()
 framerate = wavefile.getframerate()

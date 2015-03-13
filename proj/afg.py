@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # Audio Function Generator; "afg.py"...
 # -------------------------------------
 #
@@ -135,7 +136,7 @@ def main():
 		# Make the tone generation time finite in milliseconds...
 		# A count of 10000 is 10 seconds of tone burst...
 		count=0
-		while count<3000:
+		while count<10000:
 			# Write the waveform to the audio device.
 			audio.write(waveform)
 			count=count+1
