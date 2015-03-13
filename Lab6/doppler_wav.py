@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 
 #read the raw data .wave file here
-wavefile = wave.open(r"/boot/Off of Newton Exit 17.wav", "rb")
+wavefile = wave.open(r"newt17.wav", "rb")
 framerate = wavefile.getframerate()
 numframes = wavefile.getnframes()
 
