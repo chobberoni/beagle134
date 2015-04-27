@@ -36,7 +36,7 @@ for ii in range(1,int(round(len(s)/N))):
              sif.append(s[int((ii-1)*N):int(ii*N)])
           
 #subtract the average DC term here
-me=sum(s)/len(s)
+me=sum(s/)/len(s/)
 sif = [[x - me for x in y]for y in sif]
 zpad = int(8*N/2)
 

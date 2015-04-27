@@ -6,7 +6,7 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 2
 RATE = 44100
 RECORD_SECONDS = 5
-WAVE_OUTPUT_FILENAME = "bakedpiz.wav"
+WAVE_OUTPUT_FILENAME = "out_recorded.wav"
 
 p = pyaudio.PyAudio()
 

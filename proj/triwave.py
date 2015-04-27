@@ -1,35 +1,32 @@
-#/usr/bin/python
-import os
+#!usr/bin/env python  
+#coding=utf-8  
 
+import pyaudio  
+import wave  
 
-#start system
+#define stream chunk   
+chunk = 1024  
 
-print os.system("clear"),chr(13),"  ",chr(13),
+#open a wav format music  
+f = wave.open("triangle1Khz.wav","rb")  
+#instantiate PyAudio  
+p = pyaudio.PyAudio()  
+#open stream  
+stream = p.open(format = p.get_format_from_width(f.getsampwidth()),  
+                channels = f.getnchannels(),  
+                rate = f.getframerate(),  
+                output = True)  
+#read data  
+data = f.readframes(chunk)  
 
+#paly stream  
+while data != '':  
+    stream.write(data)  
+    data = f.readframes(chunk)  
 
-def signals():
-	global triangle
+#stop stream  
+stream.stop_stream()  
+stream.close()  
 
-	triangle=chr(0)+chr(7)+chr(15)+chr(29)+chr(63)+chr(29)+chr(15)+chr(7)
-
-	waveform=triangle
-	select="GOLCU."
-	count=1
-
-	while 1:
-		print os.system("clear"),chr(13),"  ",chr(13),
-		print
-
-		waveform=triangle
-		print os.system("clear"),chr(13),"  ",chr(13),
-		print
-		
-		audio=file('/dev/audio', 'wb')
-		
-		count=0
-		while count<20000:
-			audio.write(waveform)
-			count=count+1
-		audio.close()
-
-signals()
+#close PyAudio  
+p.terminate() 
