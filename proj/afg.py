@@ -81,7 +81,7 @@ def main():
 	pulseminus=chr(63)+chr(0)+chr(0)+chr(0)+chr(0)+chr(0)+chr(0)+chr(0)
 
 	# This is the INITIAL default waveform, the Square Wave.
-	waveform=square
+	waveform=triangle
 	select="G0LCU."
 	count=1
 
@@ -111,17 +111,17 @@ def main():
 		if select=="Q": break
 		if select=="q": break
 		if select=="1": waveform=sine
-		if select=="2": waveform=square
+		if select=="2": waveform=triangle
 		if select=="3": waveform=triangle
-		if select=="4": waveform=sawtoothplus
-		if select=="5": waveform=sawtoothminus
-		if select=="6": waveform=pulseplus
-		if select=="7": waveform=pulseminus
+		if select=="4": waveform=triangle
+		if select=="5": waveform=triangle
+		if select=="6": waveform=triangle
+		if select=="7": waveform=triangle
 		# Re-use the variable ~select~ again...
 		if select<=chr(48): select="Default OR last"
 		if select>=chr(56): select="Default OR last"
 		if select=="1": select="Sine wave"
-		if select=="2": select="Square wave"
+		if select=="2": select="Triangle wave"
 		if select=="3": select="Triangle wave"
 		if select=="4": select="Positive going sawtooth"
 		if select=="5": select="Negative going sawtooth"
@@ -136,7 +136,7 @@ def main():
 		# Make the tone generation time finite in milliseconds...
 		# A count of 10000 is 10 seconds of tone burst...
 		count=0
-		while count<10000:
+		while count<20000:
 			# Write the waveform to the audio device.
 			audio.write(waveform)
 			count=count+1

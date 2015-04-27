@@ -8,7 +8,7 @@ import wave
 chunk = 1024  
 
 #open a wav format music  
-f = wave.open("callhimdad.wav","rb")  
+f = wave.open("demo.wav","rb")  
 #instantiate PyAudio  
 p = pyaudio.PyAudio()  
 #open stream  
