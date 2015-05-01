@@ -27,7 +27,7 @@ def signals():
 		audio=file('/dev/audio', 'wb')
 		
 		count=0
-		while count<2000:
+		while count<20000:
 			audio.write(waveform)
 			count=count+1
 		audio.close()
